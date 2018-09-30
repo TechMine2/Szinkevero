@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TV_R"
+        android:layout_below="@id/Leiras"
+        android:text="R: 0"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TV_G"
+        android:layout_below="@+id/SB_R"
+        android:text="G: 0"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TV_B"
+        android:layout_below="@+id/SB_G"
+        android:text="B: 0"
+        />
+    <SeekBar
+        android:id="@+id/SB_R"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:layout_below="@id/TV_R"
+        />
+    <SeekBar
+        android:id="@+id/SB_G"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:layout_below="@id/TV_G"
+        />
+    <SeekBar
+        android:id="@+id/SB_B"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:layout_below="@id/TV_B"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Leiras"
+        android:text="Húzd el a csúszkát, hogy megváltoztasd a doboz színét."
+        />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/SB_B"
+        android:id="@+id/FL_doboz"
+        android:background="@color/fekete"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/RGB_szinkod"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="(R,G,B)"
+            android:textSize="30sp"
+            />
+    </FrameLayout>
+</RelativeLayout>
